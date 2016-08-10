@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GreenDaoFramework.iml" filepath="$PROJECT_DIR$/GreenDaoFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/greendaolibrary/greendaolibrary.iml" filepath="$PROJECT_DIR$/greendaolibrary/greendaolibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/greensample/greensample.iml" filepath="$PROJECT_DIR$/greensample/greensample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javalibrary/javalibrary.iml" filepath="$PROJECT_DIR$/javalibrary/javalibrary.iml" />
+    </modules>
+  </component>
+</project>

@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.example.user.greendaolibrary.entity.LockMark;
 import com.example.user.greendaolibrary.entity.LockMarkDao;
+import com.example.user.greendaolibrary.entity.PictureDao;
 import com.example.user.greendaolibrary.manager.DBManager;
 
 import java.util.List;
@@ -50,15 +51,16 @@ public class MainActivity extends Activity{
     }
 
 
-    public void query(String id) {
-        LockMarkDao lockMarkDao = DBManager.getInstance(this).getLockMaskDao();
-        LockMark lockMask = lockMarkDao.queryLockById(id);
-    }
-
+//    public void query(String id) {
+//        LockMarkDao lockMarkDao = DBManager.getInstance(this).getLockMaskDao();
+//      //  LockMark lockMask = lockMarkDao.queryLockById(id);
+//    }
+//
     public void query() {
-        LockMarkDao lockMarkDao = DBManager.getInstance(this).getLockMaskDao();
-        List<LockMark> lockMask = lockMarkDao.queryAllLock();
-        Log.i("msg", (lockMask == null ? 0 : lockMask.size()) + "");
+       // LockMarkDao lockMarkDao = DBManager.getInstance(this).getLockMaskDao();
+        PictureDao pictureDao = DBManager.getInstance(this).getPictureDao();
+//        List<LockMark> lockMask = lockMarkDao.queryAllLock();
+//        Log.i("msg", (lockMask == null ? 0 : lockMask.size()) + "");
     }
 
 

@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.user.greendaolibrary.entity.DaoMaster;
 import com.example.user.greendaolibrary.entity.DaoSession;
 import com.example.user.greendaolibrary.entity.LockMarkDao;
+import com.example.user.greendaolibrary.entity.PictureDao;
 
 
 /**
@@ -22,7 +23,7 @@ public class DBManager {
     private DaoMaster daoMaster;
     private DaoSession daoSession;
     private LockMarkDao lockMarkDao;
-
+    private PictureDao pictureDao;
     public DBManager(Context context) {
         this.context = context;
         registerCreateDB();
@@ -48,6 +49,9 @@ public class DBManager {
         return lockMarkDao;
     }
 
+    public PictureDao getPictureDao(){
+        return pictureDao;
+    }
     /**
      *     更新已做处理
      */
@@ -58,10 +62,11 @@ public class DBManager {
         // 所以，在正式的项目中，你还应该做一层封装，来实现数据库的安全升级。
         // 注意：该数据库连接属于 DaoMaster，所以多个 Session 指的是相同的数据库连接。
         if (daoMaster == null) {
-            DaoMaster.OpenHelper helper = new DaoMaster.DevOpenHelper(context, "msg_info.db", null);
+            DaoMaster.OpenHelper helper = new DaoMaster.DevOpenHelper(context, "msg.db", null);
             daoMaster = new DaoMaster(helper.getWritableDatabase());
             daoSession = daoMaster.newSession();
             lockMarkDao = daoSession.getLockMarkDao();
+            pictureDao = daoSession.getPictureDao();
         }
 
     }

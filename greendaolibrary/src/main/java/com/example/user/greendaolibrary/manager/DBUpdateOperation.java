@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteDatabase;
 public class DBUpdateOperation implements DBHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db) {
- /* Create a temporal table where you will copy all the data from the previous table that you need to modify with a non supported sqlite operation */
+      /* Create a temporal table where you will copy all the data from the previous table that you need to modify with a non supported sqlite operation */
         db.execSQL("CREATE TABLE " + "\"MSG_INFO2\" (" + //
                 "\"ID\" INTEGER PRIMARY KEY ASC ," + // 0: id
                 "\"RECEIVE_TIME\" INTEGER," + // 1: receiveTime
